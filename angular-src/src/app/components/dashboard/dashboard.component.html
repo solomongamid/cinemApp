@@ -1,2 +1,18 @@
-<h2 class="page-header">Dashboard</h2>
-<p>Welcome to your dashboard</p>
+<div class="container">
+	<div class="jumbotron text-center">
+		<h2 class="page-header">Dashboard</h2>
+		<h2>Bienvenue dans votre tableau de bord</h2>
+	</div>
+
+	<h1>Articles: </h1>
+
+	<a routerLink = "/article"><button type="button" class="btn btn-primary">Créer un article</button></a>
+
+	<div *ngFor="let article of articles">
+	  <h3>{{ article.title }}</h3>
+	  <p>{{ article.body }}</p>
+	  <button type="button" class="btn btn-danger" (click) = "deleteArticle(article.id)">Effacer </button>
+	  <button type="button" class="btn btn-success" [routerLink]="['/updateArticle', article.id]">Mettre à jour</button>
+	</div>
+
+</div>

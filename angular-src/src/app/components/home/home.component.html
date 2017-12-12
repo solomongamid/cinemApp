@@ -1,22 +1,36 @@
 <div class="jumbotron text-center">
-  <h1>Cinemapp</h1>
-  <p class="lead">Welcome to our custom MEAN authentication application built from scratch</p>
+  <h1>CinémaApp</h1>
+<!--   <p class="lead">Welcome to our custom MEAN authentication application built from scratch</p>
   <div>
     <a class="btn btn-primary" [routerLink]="['/register']">Register</a> <a class="btn btn-default" [routerLink]="['/login']">Login</a>
-  </div>
+  </div> -->
+  <h2>Bonjour, et bienvenue sur CinémaApp !</h2>
+  <p>Offrir aux cinéphiles une source pratique et rapide d'informations sur le cinéma</p>
 </div>
 
 <div class="row">
   <div class="col-md-4">
-    <h3>Express Backend</h3>
-    <p>A rock solid Node.js/Express server using Mongoose to organize models and query the database</p>
+    <img width="300" height="300" src="assets/img/santa_et_cie.jpg" alt="santa et cie"/>
+    <h3>Santa & Cie</h3>
+    <p>Rien ne va plus à l'approche du réveillon : les 92 000 lutins chargés de fabriquer les cadeaux des enfants tombent tous malades en même temps ! C'est un coup dur pour Santa (Claus), plus connu sous le nom de Père Noël... il n'a pas le choix : il doit se rendre d'urgence sur Terre avec ses rennes pour chercher un remède. À son arrivée, il devra trouver des alliés pour l'aider à sauver la magie de Noël.</p>
   </div>
   <div class="col-md-4">
-    <h3>Angular-CLI</h3>
-    <p>Angular-CLI to generate components, services and more. Local dev server and easy compilation</p>
+    <img width="300" height="300" src="assets/img/Stars_80_la_suite.jpg" alt="Stars 80 la suite"/>
+    <h3>Stars 80, la suite</h3>
+    <p>Quatre ans maintenant que la tournée Stars 80 remplit les salles.
+    Alors que les chanteurs partent pour une semaine de ski bien méritée, leurs producteurs Vincent et Antoine découvrent qu’ils ont été victimes d’une escroquerie et risquent de tout perdre.
+    Seule solution pour couvrir leurs dettes : organiser LE concert du siècle en seulement 15 jours ! </p>
   </div>
   <div class="col-md-4">
-    <h3>JWT Tokens</h3>
-    <p>Full featured authentication using JSON web tokens. Login and store user data</p>
+    <img width="300" height="300" src="assets/img/Jalouse.jpg" alt="Jalouse"/>
+    <h3>Jalouse</h3>
+    <p>Nathalie Pêcheux, professeure de lettres divorcée, passe quasiment du jour au lendemain de mère attentionnée à jalouse maladive. Si sa première cible est sa ravissante fille de 18 ans, Mathilde, danseuse classique, son champ d'action s'étend bientôt à ses amis, ses collègues, voire son voisinage... Entre comédie grinçante et suspense psychologique, la bascule inattendue d’une femme.</p>
   </div>
+</div>
+
+<h1>Articles: </h1>
+
+<div *ngFor="let article of articles">
+  <h3>{{ article.title }}</h3>
+  <p>{{ article.body }}</p>
 </div>

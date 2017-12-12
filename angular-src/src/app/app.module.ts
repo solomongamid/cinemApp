@@ -17,9 +17,13 @@ import {ValidateService} from './services/validate.service';
 import {AuthService} from './services/auth.service';
 import {FlashMessagesModule} from 'angular2-flash-messages';
 import {AuthGuard} from './guards/auth.guard';
+import { ArticleComponent } from './components/article/article.component';
+import { UpdateArticleComponent } from './components/update-article/update-article.component';
 
 const appRoutes: Routes = [
   {path:'', component: HomeComponent},
+  {path:'article', component: ArticleComponent},
+  {path:'updateArticle/:id', component: UpdateArticleComponent},
   {path:'register', component: RegisterComponent},
   {path:'login', component: LoginComponent},
   {path:'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
@@ -34,7 +38,9 @@ const appRoutes: Routes = [
     RegisterComponent,
     HomeComponent,
     DashboardComponent,
-    ProfileComponent
+    ProfileComponent,
+    ArticleComponent,
+    UpdateArticleComponent
   ],
   imports: [
     BrowserModule,
